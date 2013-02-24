@@ -50,7 +50,7 @@ var app = {
     receivedEvent: function(id) {
     	alert("eww");
         var pushNotification = window.plugins.pushNotification;
-        alert("eww");
+        alert("eww"+pushNotification+JSON.stringify(pushNotification));
         console.log("PN " + pushNotification);
         if (device.platform == 'android' || device.platform == 'Android') {
             pushNotification.register(successHandler, errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
