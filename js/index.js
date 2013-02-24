@@ -54,7 +54,15 @@ var app = {
         alert("device.platform"+device.platform);
         //console.log("PN " + pushNotification);
         if (device.platform == 'android' || device.platform == 'Android') {
+        alert("device.platform"+device.platform);
+        try{
             pushNotification.register(successHandler, errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
+            }
+            catch(e){
+            	alert("e"+e);
+            }
+            
+            alert("device.platform"+device.platform);
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
@@ -66,7 +74,6 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
     },
     // iOS
     onNotificationAPN: function(event) {
