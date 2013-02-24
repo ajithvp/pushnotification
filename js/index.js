@@ -50,9 +50,10 @@ var app = {
     receivedEvent: function(id) {
     	alert("eww");
         var pushNotification = window.plugins.pushNotification;
+        alert("eww");
         console.log("PN " + pushNotification);
         if (device.platform == 'android' || device.platform == 'Android') {
-            pushNotification.register(successHandler, errorHandler,{"senderID":"877438445200","ecb":"onNotificationGCM"});
+            pushNotification.register(successHandler, errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
