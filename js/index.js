@@ -56,7 +56,7 @@ var app = {
         if (device.platform == 'android' || device.platform == 'Android') {
         alert("device.platform"+device.platform);
         try{
-            pushNotification.register(successHandler, errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
             }
             catch(e){
             	alert("e"+e);
