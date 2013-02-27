@@ -48,21 +48,9 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-    	alert("eww");
         var pushNotification = window.plugins.pushNotification;
-        alert("eww"+pushNotification+JSON.stringify(pushNotification));
-        alert("device.platform"+device.platform);
-        //console.log("PN " + pushNotification);
         if (device.platform == 'android' || device.platform == 'Android') {
-        alert("device.platform"+device.platform);
-        try{
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"877438445200","ecb":"app.onNotificationGCM"});
-            }
-            catch(e){
-            	alert("e"+e);
-            }
-            
-            alert("device.platform"+device.platform);
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
