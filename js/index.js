@@ -40,7 +40,6 @@ var app = {
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
-        alert(error);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
@@ -84,7 +83,6 @@ var app = {
     },
     // Android
     onNotificationGCM: function(e) {
-    	alert(JSON.stringify(e));
         switch( e.event )
         {
             case 'registered':
