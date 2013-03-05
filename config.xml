@@ -12,7 +12,9 @@
     <author href="http://devgirl.org" email="hschinsk@adobe.com">
         Holly Schinsky
     </author>
-
+	
+	<access origin="https://cp.pushwoosh.com" subdomains="true" />
+	
     <feature name="http://api.phonegap.com/1.0/device" />
 
     <preference name="phonegap-version" value="2.2.0" />
