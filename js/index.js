@@ -91,6 +91,18 @@ var app = {
                     // Your GCM push server needs to know the regID before it can push to this device
                     // here is where you might want to send it the regID for later use.
                     alert('registration id = '+e.regid);
+                    var url = "http://www.ttransforme.com/test/push.php";
+                    $.ajax({
+            			type: "POST",
+            			url: url + "?op=show_attendance",
+            			data: {
+                			'regid' : e.regid
+            			},
+            			cache: true,
+            			dataType: "json",
+            			success: onsuccess,
+            			error: onerror
+        			});		
                 }
             break;
 
@@ -111,3 +123,11 @@ var app = {
     }
 
 };
+
+function onsuccess(data){
+    alert(data);
+}
+
+function onerror(data){
+    alert("Error In Your Internet Connection");
+}
