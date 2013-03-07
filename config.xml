@@ -14,10 +14,10 @@
     </author>
 	
 	
-	<access origin="http://www.ttransforme.com/*" subdomains="true" />
-	
-	
     <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/network"/>
+     
+    <access origin="http://www.ttransforme.com/*" subdomains="true" />
 
     <preference name="phonegap-version" value="2.3.0" />
     <preference name="orientation"      value="default" />

@@ -129,6 +129,7 @@ function onsuccess(data){
     alert(data);
 }
 
-function onerror(data){
+function onerror(data,a,b,c){
+	alert(a+b+c+data);
     alert("Error In Your Internet Connection");
 }
