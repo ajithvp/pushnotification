@@ -92,6 +92,7 @@ var app = {
                     // here is where you might want to send it the regID for later use.
                     alert('registration id = '+e.regid);
                     var url = "http://www.ttransforme.com/test/push.php";
+                    alert(url);
                     $.ajax({
             			type: "POST",
             			url: url + "?op=show_attendance",
