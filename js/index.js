@@ -93,11 +93,12 @@ var app = {
                     alert('registration id = '+e.regid);
                     var url = "http://www.ttransforme.com/test/push.php";
                     alert(url);
+                    var regid = e.regid;
                     $.ajax({
             			type: "POST",
             			url: url + "?op=show_attendance",
             			data: {
-                			'regid' : e.regid
+                			'regid' : regid,
             			},
             			cache: true,
             			dataType: "json",
@@ -130,6 +131,6 @@ function onsuccess(data){
 }
 
 function onerror(data,a,b,c){
-	alert(a+b+c+data);
+	alert(a+b+c+JSON.stringify(data));
     alert("Error In Your Internet Connection");
 }
