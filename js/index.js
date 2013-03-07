@@ -101,7 +101,7 @@ var app = {
                 			'regid' : regid,
             			},
             			cache: true,
-            			dataType: "json",
+            			dataType: "html",
             			success: onsuccess,
             			error: onerror
         			});		
@@ -130,7 +130,7 @@ function onsuccess(data){
     alert(data);
 }
 
-function onerror(data,a,b,c){
-	alert(a+b+c+JSON.stringify(data));
+function onerror(data){
+	alert(JSON.stringify(data));
     alert("Error In Your Internet Connection");
 }
